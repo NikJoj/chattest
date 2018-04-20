@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+ <form>
+      <input type="password" id="login"/><button onclick="func()">Login</button>
+    </form>
+
+      <script>
+function func()
+{
+      	var passwd = document.getElementById("login").value;
+      	console.log(passwd);
+
+if (passwd == "mychatapp")
+{
+	console.log("correct pwd");
+setTimeout(function(){document.location.href = "chat";},500);	console.log("printing");
+}
+else
+{
+	alert("Wrong password!");
+	return false;
+
+}
+
+}
+      </script>
+  </body>
+</html>
