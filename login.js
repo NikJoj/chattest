@@ -6,7 +6,7 @@ function func()
 if (passwd == "mychatapp")
 {
 	console.log("correct pwd");
-	document.location.href = 'chat';
+	document.location.href = 'chat',true;
 	console.log("printing");
 }
 else
