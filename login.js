@@ -6,7 +6,8 @@ function func()
 if (passwd == "mychatapp")
 {
 	console.log("correct pwd");
-setTimeout(function(){document.location.href = "chat";},500);	console.log("printing");
+	document.location.href = 'chat';
+	console.log("printing");
 }
 else
 {
