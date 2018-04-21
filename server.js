@@ -2,10 +2,22 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-var port = process.env.PORT || 8080
+var port = process.env.PORT || 8000
 
 app.get('/',function(req, res){
-	res.sendFile(__dirname + '/start.html');
+	res.sendFile(__dirname + '/startpage.html');
+});
+
+app.get('/public/css/style.css', function (req, res) {
+  res.sendFile(__dirname + '/public/css/style.css');
+});
+
+app.get('/startpage', function (req, res) {
+  res.sendFile(__dirname + '/startpage.html');
+});
+
+app.get('/login.js', function (req, res) {
+  res.sendFile(__dirname + '/login.js');
 });
 
 app.get('/chat',function(req, res){
