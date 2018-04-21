@@ -6,12 +6,13 @@ function func()
 if (passwd == "mychatapp")
 {
 	console.log("correct pwd");
-	document.location.href = 'chat',true;
+	window.location.href = "chat";
 	console.log("printing");
+	return false;
+
 }
 else
 {
 	alert("Wrong password!");
-	return false;
 
 }}
